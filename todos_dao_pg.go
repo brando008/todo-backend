@@ -71,6 +71,6 @@ func (dao *TodoDaoPGImpl) Delete(id string) error {
 }
 
 func (dao *TodoDaoPGImpl) Done(id string) error {
-	_, err := dao.conn.Exec("UPDATE todos SET completed = true, updated_at = now() WHERE id = $1", id)
+	_, err := dao.conn.Exec("UPDATE todos SET completed = NOT completed, updated_at = now() WHERE id = $1", id)
 	return err
    }
