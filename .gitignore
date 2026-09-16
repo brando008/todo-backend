@@ -1,0 +1,13 @@
+# macOS specific
+.DS_Store
+
+# Go specific
+/todo-backend
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+#secrets
+.env
